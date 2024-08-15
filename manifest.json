@@ -1,0 +1,41 @@
+{
+    "manifest_version": 3,
+    "name": "EasyClip",
+    "version": "1.0",
+    "description": "A browser-based clipboard manager",
+    "permissions": [
+      "storage",
+      "clipboardRead",
+      "clipboardWrite",
+      "contextMenus"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {},
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ],
+    "web_accessible_resources": [
+      {
+        "resources": ["styles.css"],
+        "matches": ["<all_urls>"]
+      }
+    ],
+    "options_page": "options.html",
+    "commands": {
+        "toggle-clipboard": {
+          "suggested_key": {
+            "default": "Ctrl+Shift+L",
+            "mac": "Command+Shift+L"
+          },
+          "description": "Toggle EasyClip clipboard"
+        }
+      },
+    "icons": {
+      "128": "icon.png"
+    }
+  }

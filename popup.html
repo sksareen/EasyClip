@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyClip</title>
+    <style>
+        body {
+            width: 300px;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 10px;
+        }
+        h1 {
+            font-size: 18px;
+            margin-top: 0;
+        }
+        #clipboard-items {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        .item {
+            padding: 8px;
+            border-bottom: 1px solid #eee;
+            cursor: pointer;
+        }
+        .item:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <h1>EasyClip</h1>
+    <div id="clipboard-items"></div>
+    <script src="popup.js"></script>
+</body>
+</html>
